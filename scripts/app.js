@@ -1,5 +1,5 @@
-'use strict';
-const shell = require('electron').shell;
+
+const { ipcRenderer, shell } = require('electron')
 
 class Timer {
     constructor(hours, minutes, seconds = 60) {
@@ -33,7 +33,7 @@ class Timer {
             this.seconds = this.seconds < 10 ? '0' + this.seconds : this.seconds;
 
             display.textContent = this.hours + ":" + this.minutes + ":" + this.seconds;
-
+            ipcRenderer.send('time-updated', display.textContent)
             if (this.hours == 0 && (this.minutes == 0 && this.seconds == 0)) {
                 notifyUser();
                 this.stopTimer();
@@ -69,7 +69,13 @@ class Timer {
     }
 }
 
-
+document.addEventListener('click', (event) => {
+    if (event.target.href) {
+        // Open links in external browser
+        shell.openExternal(event.target.href)
+        event.preventDefault()
+    }
+})
 
 
 let normalTimer = new Timer(0, 0);

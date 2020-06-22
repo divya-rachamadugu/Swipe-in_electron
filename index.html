@@ -3,43 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Swipe In!</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link href="styles/bootstrap.min.css" rel="stylesheet" id="light" class='alternate'>
     <link href="styles/bootstrap.dark.min.css" rel="stylesheet" id="dark" class='alternate' disabled>
-
+    <link rel="stylesheet" href="styles/photon.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/index.css" media="screen" charset="utf-8">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="styles/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="styles/starter-template.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+
 </head>
 
 <body>
-    <div>
-        <div class="container">
+    <div class="header-arrow"></div>
+    <div class="window">
+        <div class="window-content">
 
-            <div class="starter-template">
-                <h1 id="time">00:00:00</h1>
-            </div>
-
-        </div>
-        <div class="container">
-
-            <div class="starter-template">
-                <div class="row">
-                    <div>
-                        <button type="button" class="btn btn-large btn-primary full-width" id="start"><span
-                                class="glyphicon glyphicon-play"></span></button>
-
-                        <button type="button" id="stop" class="btn btn-large btn-success full-width"><span
-                                class="glyphicon glyphicon-pause"></span></button>
-
-                        <button type="button" class="btn btn-large btn-danger full-width" id="reset"><span
-                                class="glyphicon glyphicon-repeat"></span></button>
-                    </div>
+            <div class="pane">
+                <div class="column">
+                    <h3 id="time">00:00:00</h3>
                 </div>
+                <div class="column">
+                    <button type="button" class="btn btn-small btn-primary full-width" id="start"><span
+                            class="glyphicon glyphicon-play"></span></button>
+
+                    <button type="button" id="stop" class="btn btn-small btn-success full-width"><span
+                            class="glyphicon glyphicon-pause"></span></button>
+
+                    <button type="button" class="btn btn-small btn-danger full-width" id="reset"><span
+                            class="glyphicon glyphicon-repeat"></span></button>
+                </div>
+
             </div>
 
         </div>

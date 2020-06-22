@@ -1,5 +1,5 @@
 {
-  "name": "electron-test",
+  "name": "swipein",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "electron": "^9.0.4"
+  "devDependencies": {
+    "electron": "^9.0.4",
+    "electron-packager": "^14.2.1"
   }
 }
